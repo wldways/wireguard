@@ -23,7 +23,7 @@ services:
       - SERVERURL=auto #optional
       - SERVERPORT=51820 #optional
       - PEERS=100 #optional
-      - PEERDNS=auto #optional
+      - PEERDNS=1.1.1.1 #optional
       - INTERNAL_SUBNET=10.13.13.0 #optional
       - ALLOWEDIPS=0.0.0.0/0 #optional
     volumes:
