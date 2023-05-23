@@ -1,10 +1,9 @@
-cat << EOF > ~/wireguard/docker-compose.yml
 ---
 version: "2.1"
 services:
   wireguard:
     image: lscr.io/linuxserver/wireguard
-    container_name: wireguard
+    container_name: wireguard2
     cap_add:
       - NET_ADMIN
       - SYS_MODULE
@@ -16,7 +15,7 @@ services:
       - SERVERPORT=51820 #optional
       - PEERS=250 #optional
       - PEERDNS=auto #optional
-      - INTERNAL_SUBNET=10.13.13.1 #optional
+      - INTERNAL_SUBNET=10.13.14.0 #optional
       - ALLOWEDIPS=0.0.0.0/0 #optional
     volumes:
       - ~/wireguard/config:/config
@@ -26,4 +25,3 @@ services:
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
     restart: unless-stopped
-EOF
