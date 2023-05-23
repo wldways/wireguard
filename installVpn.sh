@@ -24,7 +24,7 @@ services:
       - SERVERPORT=51820 #optional
       - PEERS=250 #optional
       - PEERDNS=auto #optional
-      - INTERNAL_SUBNET=10.13.13.0 #optional
+      - INTERNAL_SUBNET=10.13.13.1 #optional
       - ALLOWEDIPS=0.0.0.0/0 #optional
     volumes:
       - ~/wireguard/config:/config
